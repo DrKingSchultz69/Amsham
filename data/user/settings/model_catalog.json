@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "services": {
+    "llm": {
+      "active_profile_id": "llm-profile-openai-codex-managed",
+      "active_model_id": "llm-model-openai-codex-419255f2bb4c6801",
+      "profiles": [
+        {
+          "id": "llm-profile-openai-codex-managed",
+          "name": "OpenAI Codex",
+          "binding": "openai_codex",
+          "base_url": "https://chatgpt.com/backend-api",
+          "api_key": "",
+          "api_version": "",
+          "extra_headers": {},
+          "managed_by": "openai_codex_oauth",
+          "read_only": true,
+          "owner_bound": true,
+          "models": [
+            {
+              "id": "llm-model-openai-codex-419255f2bb4c6801",
+              "name": "GPT-5.6-Sol",
+              "model": "gpt-5.6-sol",
+              "managed_by": "openai_codex_oauth",
+              "codex_priority": 5,
+              "codex_default_reasoning_level": "low",
+              "codex_supported_reasoning_levels": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max",
+                "ultra"
+              ],
+              "codex_supports_reasoning_summary": true,
+              "codex_supports_parallel_tool_calls": true,
+              "codex_use_responses_lite": true
+            },
+            {
+              "id": "llm-model-openai-codex-deda3dc02a1d1575",
+              "name": "GPT-5.6-Terra",
+              "model": "gpt-5.6-terra",
+              "managed_by": "openai_codex_oauth",
+              "codex_priority": 8,
+              "codex_default_reasoning_level": "medium",
+              "codex_supported_reasoning_levels": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max",
+                "ultra"
+              ],
+              "codex_supports_reasoning_summary": true,
+              "codex_supports_parallel_tool_calls": true,
+              "codex_use_responses_lite": true
+            },
+            {
+              "id": "llm-model-openai-codex-e33230db3dd7d2f0",
+              "name": "GPT-5.6-Luna",
+              "model": "gpt-5.6-luna",
+              "managed_by": "openai_codex_oauth",
+              "codex_priority": 9,
+              "codex_default_reasoning_level": "medium",
+              "codex_supported_reasoning_levels": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "codex_supports_reasoning_summary": true,
+              "codex_supports_parallel_tool_calls": true,
+              "codex_use_responses_lite": true
+            }
+          ]
+        }
+      ]
+    },
+    "embedding": {
+      "active_profile_id": null,
+      "active_model_id": null,
+      "profiles": []
+    },
+    "search": {
+      "active_profile_id": null,
+      "profiles": []
+    },
+    "tts": {
+      "active_profile_id": null,
+      "active_model_id": null,
+      "profiles": []
+    },
+    "stt": {
+      "active_profile_id": null,
+      "active_model_id": null,
+      "profiles": []
+    },
+    "imagegen": {
+      "active_profile_id": null,
+      "active_model_id": null,
+      "profiles": []
+    },
+    "videogen": {
+      "active_profile_id": null,
+      "active_model_id": null,
+      "profiles": []
+    }
+  }
+}

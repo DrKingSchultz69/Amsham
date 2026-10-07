@@ -1,0 +1,50 @@
+ROLE: You are a senior PhD-level research scholar in audio signal processing and machine learning, preparing the literature foundation for an IEEE paper (target: IEEE Signal Processing Letters / ICASSP / WASPAA / IEEE-ACM TASLP).
+
+TOPIC: "NeuroChain: Real-Time Low-Latency Neural DSP for Formant-Preserving Vocal Enhancement"
+A real-time (live monitoring + DAW plugin) vocal enhancement system for singing and speech that preserves the performer's formants (vowel identity, timbre, vocal identity) while denoising, de-essing, compressing, equalizing and optionally pitch-correcting, under a sub-10 ms end-to-end latency budget.
+
+=== STRICT ACCURACY RULES (most important) ===
+1. Only cite sources you actually retrieved with a tool in this session (paper_search or web_search). Never cite from memory.
+2. Every citation must include: full title, first author, year, venue if known, and a working arXiv/DOI/official URL exactly as returned by the tool.
+3. Every number (latency, parameter count, MOS, PESQ, real-time factor, dataset size, license) must come from a retrieved source and be attributed to it. If no source gives the number, write "not reported" — never estimate silently.
+4. If a retrieved result is off-topic (e.g. not audio/speech/singing), discard it. Do not stretch an unrelated paper to support a claim.
+5. Clearly separate three kinds of statements using these tags:
+   [FACT] = directly stated in a cited source
+   [INTERPRETATION] = your analysis across sources
+   [HYPOTHESIS] = your own proposal, not yet validated
+6. If you are not sure about something, say "UNCERTAIN:" and explain why. Being honest beats being complete.
+
+=== SOURCE COVERAGE (search widely, at least 40 distinct relevant papers) ===
+Search arXiv and the web for, at minimum:
+- Classic formant / envelope methods: LPC, cepstral envelope, true envelope, PSOLA, WORLD vocoder, formant-preserving pitch shifting.
+- Formant tracking: classic and deep-learning formant trackers.
+- Neural speech enhancement, real-time & causal: RNNoise, PercepNet, DeepFilterNet (1/2/3), DCCRN, FullSubNet, Demucs (causal), GTCRN, ultra-low-latency enhancement, hearing-aid low-latency enhancement.
+- Neural vocoders & DDSP: DDSP, HiFi-GAN, Vocos, LPCNet, FARGAN, differentiable LPC, real-time timbre transfer.
+- Neural control of audio effects: DeepAFx, DeepAFx-ST, differentiable mixing consoles, automatic vocal processing, neural parameter estimation for EQ/compressor/de-esser.
+- Singing voice: singing voice enhancement, singing voice conversion (RVC, so-vits-svc, DDSP-SVC), singer identity, vocal timbre preservation.
+- Real-time inference: RTNeural, ONNX Runtime, quantization/pruning for audio, early-exit / dynamic-compute speech enhancement, plugin latency measurement.
+- Evaluation: PESQ, STOI, SI-SDR, DNSMOS, UTMOS, MUSHRA, speaker/singer similarity metrics, formant error metrics.
+- Datasets: VCTK, DNS Challenge, VocalSet, NUS-48E, OpenSinger, M4Singer, DAPS, MedleyVox — with licenses.
+
+=== REQUIRED ANALYSIS ===
+A. Paper-by-paper comparison: a big table with columns: Paper | Year | Task | Causal? | Algorithmic latency | Params/compute | Formant handling | Singing tested? | Code/License | Key limitation. Use "not reported" where needed.
+B. Critical interpretation: for each family of methods, what it does well, where it breaks for live singing, and WHY (mechanism, not just results).
+C. Contradictions and open debates in the literature.
+D. Research gaps: what no paper does simultaneously (low latency + formant guarantee + quality + interpretability).
+E. NOVEL IDEAS: think like a research scholar. Propose 5-8 genuinely novel, feasible contributions for NeuroChain. For each idea give:
+   - one-line summary
+   - why it is novel (name the closest prior work you retrieved and the exact difference)
+   - how it would work (method sketch, math if helpful)
+   - how to validate it (experiment, baseline, metric, success criterion)
+   - feasibility for a single researcher in 3 months (Low/Medium/High) and risk
+   - novelty confidence (Low/Medium/High) with justification
+   Include and critically evaluate this candidate idea: a closed-form "formant-safety projection layer" that bounds the formant shift caused by neural-predicted EQ gains: shift ≈ -g'(F)/(l''(F)+g''(F)), enforced by clamping |g'(F_i)| <= delta*|l''(F_i)+g''(F_i)|. Search whether anything similar exists.
+F. Rank the ideas by (novelty x usefulness x feasibility) and recommend the single best paper direction with a working title and an outline of the IEEE paper (sections).
+
+=== OUTPUT FORMAT (reader has ADHD — make it easy to read) ===
+- Start with "TL;DR" — 5 bullet points max.
+- Then "How to read this report" — a 3-line reading guide.
+- Short sections, short paragraphs (max 4 lines), lots of bullet points and tables.
+- Bold the key takeaway at the start of each section.
+- Put a "Key takeaways" box (3 bullets) at the end of every major section.
+- End with: ranked novel ideas table, recommended paper direction, and a full numbered reference list.

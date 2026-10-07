@@ -1,0 +1,32 @@
+{
+ "response": "",
+ "output_dir": "",
+ "outline_preview": true,
+ "topic": "I’ll research and compare classical DSP, neural enhancement, neural vocoder, voice-conversion, and differentiable-DSP methods for real-time singing and speech-vocal enhancement with explicit formant preservation. The review will emphasize causal/streaming operation, sub-10-ms live-monitoring constraints, computational footprint, plugin deployment, dataset licensing, and objective and subjective evaluation. It will identify the joint gap between latency, vocal identity preservation, and perceptual quality, then propose a modular NeuroChain architecture with per-stage latency budgets and a three-month baseline, ablation, and validation plan. Claims will be supported with direct arXiv links where available, while uncertain latency, model-size, licensing, and formant-preservation evidence will be clearly flagged.",
+ "sub_topics": [
+  {
+   "title": "Method Taxonomy and Formant-Preservation Mechanisms",
+   "overview": "Compare classical DSP, neural enhancement, neural vocoders, voice-conversion systems, and differentiable-DSP approaches for singing and speech-vocal enhancement. Focus on how each method represents, preserves, or alters formants, vocal identity, pitch, timbre, and expressiveness, while linking claims to direct arXiv sources and flagging uncertain evidence."
+  },
+  {
+   "title": "Causal Real-Time Operation and System Constraints",
+   "overview": "Assess causal and streaming architectures against sub-10-ms live-monitoring requirements, including algorithmic latency, look-ahead, frame and hop sizes, throughput, memory, parameter count, and hardware assumptions. Identify the computational and latency trade-offs that determine practical real-time feasibility."
+  },
+  {
+   "title": "Plugin Deployment, Licensing, and Reproducibility",
+   "overview": "Examine deployment pathways for DAW and live-use plugins, including differentiable or neural components, inference runtimes, CPU/GPU requirements, model packaging, and cross-platform integration. Document dataset, code, model, and dependency licenses, distinguishing verified information from unresolved or uncertain licensing and model-size claims."
+  },
+  {
+   "title": "Evaluation Framework for Quality, Identity, and Formants",
+   "overview": "Design and compare objective and subjective evaluation methods for enhancement quality, intelligibility, perceptual naturalness, vocal identity, pitch and timbre fidelity, and explicit formant preservation. Cover suitable datasets, singing and speech test conditions, baselines, listening-test protocols, metrics, and the limitations or uncertainty of available evidence."
+  },
+  {
+   "title": "NeuroChain Architecture, Research Gap, and Validation Plan",
+   "overview": "Synthesize the joint gap between low latency, vocal-identity preservation, and perceptual quality into a modular NeuroChain proposal with per-stage latency budgets and clearly defined interfaces. Specify the three-month baseline, ablation, and validation plan, including experiments that isolate each module’s contribution and test end-to-end deployment feasibility."
+  }
+ ],
+ "research_config": {
+  "mode": "report",
+  "depth": "deep"
+ }
+}

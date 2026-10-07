@@ -1,0 +1,22 @@
+[
+ {
+  "title": "Evidence Corpus and Reporting Framework",
+  "overview": "Define the search, screening, classification, and citation-tracing process for at least 40 relevant sources. Establish rules for separating sourced facts, cross-paper interpretations, and unvalidated hypotheses, while marking unavailable quantitative details as \"not reported.\""
+ },
+ {
+  "title": "Formant, Vowel, Timbre, and Performer-Identity Preservation",
+  "overview": "Review speech and singing acoustics, formant estimation and tracking, source-filter interactions, pitch-dependent challenges, and perceptual factors governing vowel, timbre, and identity preservation. Identify measurable safety constraints and limitations of existing tracking methods."
+ },
+ {
+  "title": "Neural-DSP Vocal Processing Landscape",
+  "overview": "Compare causal speech enhancement, neural vocoders, differentiable DSP, learned audio effects, and singing-voice processing systems by architecture, controllability, audio quality, conditioning, and preservation behavior. Organize the closest prior work into traceable comparison tables without conflating distinct task settings."
+ },
+ {
+  "title": "Real-Time Architecture, Efficient Inference, and Latency Accounting",
+  "overview": "Investigate causal and streaming model designs, frame and hop requirements, lookahead, state handling, computational efficiency, and deployment constraints relevant to sub-10 ms operation. Distinguish algorithmic, buffering, inference, I/O, and measured end-to-end system latency, recording absent values as \"not reported.\""
+ },
+ {
+  "title": "NeuroChain Novelty, Validation, and Paper Direction",
+  "overview": "Evaluate the proposed closed-form formant-safety projection against the closest retrieved methods, then formulate and rank 5–8 feasible technical contributions. Select one three-month direction and specify datasets and licensing, baselines, ablations, objective and listening evaluations, latency tests, statistical analysis, IEEE-style paper structure, comparison tables, and fully traceable references."
+ }
+]
